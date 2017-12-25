@@ -3,12 +3,12 @@ $(document).ready(function(){
   var temp;
   var result=$('#quote');
   $.ajax({
-    url: 'http://quotes.stormconsultancy.co.uk/random.json',
+    url: 'https://api.forismatic.com/api/1.0/?method=getQuote&format=jsonp&lang=en&jsonp=?',
     method: 'get',
     dataType: 'json',
     success: function(data){
       temp=data.quote;
-      result.html('<blockquote>' + data.quote + '<br>' + '<footer>' + data.author + '</footer>' + '</blockquote>');
+      result.html('<blockquote>' + data.quoteText + '<br>' + '<footer>' + data.quoteAuthor + '</footer>' + '</blockquote>');
       previousquote=temp;
     }
   });
