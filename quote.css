@@ -1,0 +1,31 @@
+body{
+  background-color: #B0B0B0;
+}
+h1{
+  font-family: 'Risque', cursive;
+}
+.row{
+  text-align: center;
+  margin: 0px 0px;
+}
+.btn{
+  margin: 10px;
+}
+.container{
+  max-width: 600px;
+  margin: 5% auto auto auto;
+  margin-bottom: 0px;
+}
+p{
+  margin: 0px;
+}
+#footer{
+  position: fixed;
+  text-align: center;
+  width: 100%;
+  margin: 18% auto auto auto;
+  padding: 15px;
+  bottom: 0;
+  color: white;
+  background-color: black;
+}
