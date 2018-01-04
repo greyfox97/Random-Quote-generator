@@ -1,16 +1,12 @@
 $(document).ready(function(){
-  var x = document.getElementById("coordinates");
-
-  function getLocation() {
-      if (navigator.geolocation) {
-          navigator.geolocation.getCurrentPosition(showPosition);
-      } else {
-          x.innerHTML = "Geolocation is not supported by this browser.";
+  function showPosition(){
+      if(navigator.geolocation){
+          navigator.geolocation.getCurrentPosition(function(position){
+              var positionInfo = "Your current position is (" + "Latitude: " + position.coords.latitude + ", " + "Longitude: " + position.coords.longitude + ")";
+              document.getElementById("coordinates").innerHTML = positionInfo;
+          });
+      } else{
+          alert("Sorry, your browser does not support HTML5 geolocation.");
       }
-  }
-
-  function showPosition(position) {
-      x.innerHTML = "Latitude: " + position.coords.latitude +
-      "<br>Longitude: " + position.coords.longitude;
   }
 });
