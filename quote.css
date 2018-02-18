@@ -1,6 +1,12 @@
 body{
   background-color: #B0B0B0;
 }
+#quote{
+  background-color: #ffffff;
+}
+blockquote{
+  background-color: #ffffff;
+}
 h1{
   font-family: 'Risque', cursive;
 }
